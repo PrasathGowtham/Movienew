@@ -43,3 +43,17 @@ text-align: center;
       background-color: lightblue;
     }
   }
+@media only screen and (max-width: 600px) {
+    .alignseat {
+      background-color: lightblue;
+    }
+    #main{
+
+    }
+    #main1{
+        overflow-y: auto;
+    }
+    .time{
+        
+    }
+  }
