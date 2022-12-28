@@ -29,13 +29,13 @@ function Ticket() {
         settime(time + e.target.innerText)
     }
     return (
-        <div style={{ backgroundColor:"#D1D7E0" }} className="col-sm-12">
+        <div style={{ backgroundColor:"#D1D7E0" }} className="col-sm-12" id="main">
           
             <Commonpage />
             <div className="row">
 
-                <div className="alignseat col-8">
-                    <div className="timing col-12"> <span>Show Timings =</span> <Button variant="text" name="time" onClick={handelTime}>9.00Am</Button> <Button variant="text" onClick={handelTime}>12.30Pm</Button> <Button variant="text" onClick={handelTime}>4.00Pm</Button> <Button variant="text" onClick={handelTime}>8.00Pm</Button></div>
+                <div className="alignseat col-8" id="main1">
+                    <div className="timing col-12 " class="time"> <span>Show Timings =</span> <Button variant="text" name="time" onClick={handelTime}>9.00Am</Button> <Button variant="text" onClick={handelTime}>12.30Pm</Button> <Button variant="text" onClick={handelTime}>4.00Pm</Button> <Button variant="text" onClick={handelTime}>8.00Pm</Button></div>
                     <div className=" col-12 row" style={{ paddingLeft: "180px" }}> <tr>
                   
                         <td><div class="seat" > <a onClick={(e) => handelIncrement(e)}>A</a>  </div></td>
