@@ -28,6 +28,37 @@ function Ticket() {
 
         settime(time + e.target.innerText)
     }
+     const handelbook = (e) => {
+        e.preventDefault();
+        if (book === "") {
+            alert("please enter amount");
+        } else {
+            var options = {
+                key: "rzp_test_jTJqnR9IE7rKfK",
+                key_secret: "AJbDanTJNr8NOx75rjaKX5CQ",
+                amount: book * 100,
+                currency: "INR",
+                name: "STARTUP_PROJECTS",
+                description: "for testing purpose",
+                handler: function (response) {
+                    alert(response.razorpay_payment_id);
+                },
+                prefill: {
+                    name: "JoyBooking",
+                    email: "joybooking@gmail.com",
+                    contact: "1234567898"
+                },
+                notes: {
+                    address: "Razorpay Corporate office"
+                },
+                theme: {
+                    color: "#3399cc"
+                }
+            };
+            var pay = new window.Razorpay(options);
+            pay.open();
+        }
+    }
     return (
         <div style={{ backgroundColor:"#D1D7E0" }} className="col-sm-12" id="main">
           
@@ -198,7 +229,7 @@ function Ticket() {
                         <h4>Total Price : &#8377; {book * 120}</h4>
                        
                     </div>
-                    <div style={{ paddingTop: "100px" ,color:"black"}}><button type="button" class="btn btn-success" onClick={()=>navigate("/book")}>BOOK NOW</button></div>
+                    <div style={{ paddingTop: "100px" ,color:"black"}}><button type="button" class="btn btn-success" onClick={handelbook}>BOOK NOW</button></div>
                 </div>
             </div>
         </div>
