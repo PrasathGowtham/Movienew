@@ -36,7 +36,7 @@ function Ticket() {
             var options = {
                 key: "rzp_test_jTJqnR9IE7rKfK",
                 key_secret: "AJbDanTJNr8NOx75rjaKX5CQ",
-                amount: book * 100,
+                amount: book * 200,
                 currency: "INR",
                 name: "STARTUP_PROJECTS",
                 description: "for testing purpose",
